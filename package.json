@@ -1,0 +1,56 @@
+{
+  "name": "dsh-dialogue-mindmap",
+  "version": "1.2.3",
+  "description": "Canvas view beside the Chat tab for DeepSeek Harness: each turn is a mind-map node, and you can branch follow-ups from any node within the same session.",
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "mindmap",
+    "canvas",
+    "conversation"
+  ],
+  "license": "MIT",
+  "author": "gaor0605-kq",
+  "homepage": "https://github.com/gaor0605-kq/dsh-dialogue-mindmap#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaor0605-kq/dsh-dialogue-mindmap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gaor0605-kq/dsh-dialogue-mindmap/issues"
+  },
+  "icon": "icon.svg",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation", "@deepseek-ai/dsh-client-ui-chat"]
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

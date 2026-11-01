@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Dialogue Canvas",
+    "description": "A canvas view beside the Chat tab: each turn is a node, and you can branch follow-ups from any node within the same session."
+  }
+}
